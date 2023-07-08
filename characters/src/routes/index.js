@@ -8,7 +8,7 @@ router.get("/characters", controllers.getCharacters);
 
 router.post(
   "/characters",
-  middlewares.characterValidation,
+  // middlewares.characterValidation,
   controllers.createCharacter
 );
 
