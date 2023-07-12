@@ -7,7 +7,10 @@ const router = Router();
 router.get("/:model", validateModel, async (req, res) => {
   const { model } = req.params;
   const response = await store[model].find();
-  res.status(200).json(response);
+  console.log({ response });
+  if (response.length !== 0) {
+    res.status(200).json(response);
+  } else res.status(400).send("Data lost...");
 });
 
 router.get("/:model/:id", validateModel, async (req, res) => {

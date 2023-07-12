@@ -13,7 +13,7 @@ const Planet = conn.model("Planet", require("./schemas/planetSchema"));
 //   .then((res) => console.log(res[0]));
 
 module.exports = {
-  Character: conn.model("Character", require("./schemas/characterSchema")),
-  Film: conn.model("Film", require("./schemas/filmSchema")),
-  Planet: conn.model("Planet", require("./schemas/planetSchema")),
+  Character,
+  Film,
+  Planet,
 };
